@@ -35,17 +35,9 @@ class API:
 		
 		#Store info in list of dictionaries
 		for item in json_object['data']:
-			
 			dict = {}		
 			dict['media_type'] = item['type']
 			dict['location'] = item['location']
-			dict['tags'] = item['tags']
-			temp = item['caption']
-
-			if(temp is not None):
-				dict['caption_text'] = temp['text']
-
-			#print dict
 			self.loc_list.append(dict)
 			
 #------------------------------------------------------------------------------------------------
